@@ -1,6 +1,12 @@
 ---
 ---
 
+.markdown-body p.tagline {
+    text-align: right;
+    font-style: italic;
+    margin-top: -1em;
+}
+
 .markdown-body {
   font-family: Georgia,Cambria,"Times New Roman",Times,serif;
   font-size: 18px;
