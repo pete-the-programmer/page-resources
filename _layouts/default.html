@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme" content="{{ site.theme }}" />
+    <meta name="env" content="{{jekyll.environment}}" />
     <link rel="stylesheet" href="{{ "/page-resources/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     
@@ -15,7 +16,7 @@
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
       <header>
-        <h1>{{ page.title | site.title | default: site.github.repository_name }}</h1>
+        <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
         <p class="tagline">{{ page.description }}</p>
 
       </header>
@@ -27,5 +28,7 @@
       <footer>
       </footer>
     </div>
+    <script src="https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
   </body>
 </html>
